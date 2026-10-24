@@ -6,7 +6,7 @@
 
 <p align="center">
   Notch MacBook yang akhirnya berguna. Gratis, tanpa akun, tanpa license key.<br>
-  <a href="https://www.adirp.id/">adirp.id</a>
+  <a href="https://www.adirp.id/2026/10/arnotch-elevate-your-mac.html">Baca ulasan & cerita pembuatannya di Blog</a> · <a href="https://www.adirp.id/">adirp.id</a>
 </p>
 
 <p align="center">
@@ -69,7 +69,8 @@ Detail arsitektur dan catatan teknis ada di [docs/DEVELOPMENT.md](docs/DEVELOPME
 
 ## Dibuat oleh
 
-**Adi Rizky Pratama** · [adirp.id](https://www.adirp.id/)
+**Adi Rizky Pratama** · [adirp.id](https://www.adirp.id/) · [Artikel Blog: ARNotch — Elevate Your Mac](https://www.adirp.id/2026/10/arnotch-elevate-your-mac.html)
+
 
 ## Lisensi
 
