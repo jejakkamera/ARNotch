@@ -1,0 +1,16 @@
+# SwiftPM
+.build/
+.swiftpm/
+Package.resolved
+
+# Build output (attach the .dmg to a GitHub Release instead)
+dist/
+*.dmg
+*.app
+
+# macOS / editors
+.DS_Store
+xcuserdata/
+*.xcuserstate
+.vscode/
+.idea/

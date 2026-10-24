@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key><string>en</string>
+    <key>CFBundleExecutable</key><string>ARNotch</string>
+    <key>CFBundleIdentifier</key><string>id.crest.app</string>
+    <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+    <key>CFBundleName</key><string>ARNotch</string>
+    <key>CFBundleDisplayName</key><string>ARNotch</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>1.0.0</string>
+    <key>CFBundleVersion</key><string>1</string>
+    <key>CFBundleIconFile</key><string>AppIcon</string>
+    <key>LSMinimumSystemVersion</key><string>14.0</string>
+    <key>LSUIElement</key><true/>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSPrincipalClass</key><string>NSApplication</string>
+    <key>NSBluetoothAlwaysUsageDescription</key><string>ARNotch shows connected Bluetooth accessories in the Connectivity tab when you choose to include Bluetooth.</string>
+    <key>NSMicrophoneUsageDescription</key><string>ARNotch records sound with videos you capture in the Mirror widget.</string>
+    <key>NSCameraUsageDescription</key><string>ARNotch uses the camera for the Mirror widget so you can check yourself before a call.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key><string>ARNotch shows your upcoming events in the notch.</string>
+    <key>NSCalendarsUsageDescription</key><string>ARNotch shows your upcoming events in the notch.</string>
+    <key>NSAppleEventsUsageDescription</key><string>ARNotch reads the current track from Music and Spotify and controls playback.</string>
+</dict>
+</plist>
