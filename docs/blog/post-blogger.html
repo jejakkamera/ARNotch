@@ -1,0 +1,303 @@
+<!-- ARNotch — postingan untuk Blogspot. Tempel di "Tampilan HTML" editor Blogger.
+     Gambar dan file .dmg dimuat langsung dari github.com/jejakkamera/ARNotch. -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&display=swap');
+/* adirp.id palette (#1a73e8, Outfit + Inter) with a modern product-page layout: big hero, bento grid. */
+.arn{--blue:#1a73e8;--blue-d:#1557b0;--blue-l:#e8f0fe;--text:#202124;--muted:#5f6368;--faint:#80868b;--line:#e8eaed;--soft:#f8fafd;--ink:#0d0f12;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;line-height:1.65;color:var(--text);
+  max-width:1040px;margin:0 auto;-webkit-font-smoothing:antialiased;container-type:inline-size}
+.arn *,.arn *::before,.arn *::after{box-sizing:border-box}
+.arn img{max-width:100%;height:auto;display:block;border:0;box-shadow:none;padding:0;background:transparent}
+.arn a{color:var(--blue);text-decoration:none}
+.arn h1,.arn h2,.arn h3{font-family:'Outfit','Inter',sans-serif;color:var(--text);margin:0;letter-spacing:-.025em}
+.arn p{margin:0;color:var(--muted)}
+.arn .wrap{padding:0 clamp(16px,4cqw,40px)}
+.arn .label{display:inline-block;font:600 12px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.arn .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:9999px;font-weight:600;font-size:15px;transition:background .2s,transform .2s,box-shadow .2s}
+.arn .btn.primary{background:var(--blue);color:#fff!important;box-shadow:0 6px 18px rgba(26,115,232,.28)}
+.arn .btn.primary:hover{background:var(--blue-d);transform:translateY(-1px)}
+.arn .btn.ghost{color:var(--text)!important;background:#fff;border:1px solid var(--line)}
+.arn .btn.ghost:hover{border-color:#c6cad0}
+
+/* ---------- Hero ---------- */
+.arn .hero{position:relative;padding:64px 0 0;text-align:center;overflow:hidden;border-radius:28px;
+  background:radial-gradient(800px 380px at 50% 0%,#dce8fd 0%,rgba(232,240,254,.6) 45%,#fff 80%)}
+.arn .hero .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:9999px;background:#fff;border:1px solid var(--line);font-size:13px;color:var(--muted);margin-bottom:22px}
+.arn .hero .badge img{width:24px;height:24px;border-radius:50%}
+.arn .hero .badge b{color:var(--text);font-weight:600}
+.arn .hero h1{font-size:clamp(36px,7.4cqw,68px);font-weight:900;line-height:1.02;max-width:820px;margin:0 auto 18px}
+.arn .hero h1 span{color:var(--blue)}
+.arn .hero .sub{font-size:clamp(16px,2.2cqw,19px);max-width:620px;margin:0 auto 28px}
+.arn .hero .ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.arn .hero .fine{font-size:13px;color:var(--faint)}
+.arn .stage{position:relative;margin:48px auto 0;width:min(860px,94%)}
+.arn .stage::before{content:"";position:absolute;left:8%;right:8%;bottom:-10%;height:60%;background:radial-gradient(closest-side,rgba(26,115,232,.35),transparent);filter:blur(30px)}
+
+/* Animated MacBook */
+.arn .mac{position:relative;width:100%;aspect-ratio:16/9.6;border-radius:18px 18px 0 0;overflow:hidden;
+  background:radial-gradient(120% 90% at 70% 100%,#1e3a8a 0%,#1a73e8 45%,#8ab4f8 100%);border:10px solid #16181c;border-bottom:0}
+.arn .base{position:relative;height:16px;margin:0 -4%;border-radius:0 0 18px 18px;background:linear-gradient(#d7dbe0,#aeb4bb)}
+.arn .base::before{content:"";position:absolute;left:50%;top:0;width:16%;height:6px;transform:translateX(-50%);border-radius:0 0 8px 8px;background:#9aa0a6}
+.arn .menubar{position:absolute;top:0;left:0;right:0;height:24px;background:rgba(255,255,255,.28);backdrop-filter:blur(8px)}
+.arn .menubar i{position:absolute;top:9px;height:6px;border-radius:3px;background:rgba(255,255,255,.85)}
+.arn .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);background:#000;z-index:2;overflow:hidden;
+  width:140px;height:24px;border-radius:0 0 11px 11px;animation:arn-notch 14s cubic-bezier(.4,0,.2,1) infinite;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+@keyframes arn-notch{
+  0%,6%{width:140px;height:24px;border-radius:0 0 11px 11px}
+  10%,28%{width:214px;height:24px;border-radius:0 0 11px 11px}
+  33%,54%{width:80%;height:56%;border-radius:0 0 26px 26px}
+  59%,94%{width:214px;height:24px;border-radius:0 0 11px 11px}
+  100%{width:140px;height:24px;border-radius:0 0 11px 11px}}
+.arn .wing{position:absolute;top:0;height:24px;display:flex;align-items:center;opacity:0}
+.arn .wing.l{left:10px}.arn .wing.r{right:11px}
+.arn .w-music{animation:arn-a 14s infinite}.arn .w-timer{animation:arn-b 14s infinite}
+@keyframes arn-a{0%,10%{opacity:0}12%,28%{opacity:1}31%,100%{opacity:0}}
+@keyframes arn-b{0%,60%{opacity:0}62%,92%{opacity:1}95%,100%{opacity:0}}
+.arn .art{width:14px;height:14px;border-radius:3px;background:linear-gradient(135deg,#fbbc04,#ea8600)}
+.arn .bars{display:flex;gap:2px;align-items:center;height:11px}
+.arn .bars b{width:2.5px;border-radius:2px;background:#fdd663;animation:arn-bar .9s ease-in-out infinite alternate}
+.arn .bars b:nth-child(1){height:5px;animation-delay:-.2s}.arn .bars b:nth-child(2){height:11px;animation-delay:-.5s}
+.arn .bars b:nth-child(3){height:7px;animation-delay:-.1s}.arn .bars b:nth-child(4){height:9px;animation-delay:-.7s}
+@keyframes arn-bar{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+.arn .tmr{font:600 11px ui-monospace,Menlo,monospace;color:#fbbc04}
+.arn .tmr-ico{width:11px;height:11px;border:2px solid #fbbc04;border-radius:50%}
+.arn .panel{position:absolute;inset:32px 16px 14px;display:grid;grid-template-columns:1.2fr .8fr .6fr;gap:10px;opacity:0;animation:arn-p 14s infinite}
+@keyframes arn-p{0%,35%{opacity:0;transform:translateY(-4px)}39%,51%{opacity:1;transform:none}54%,100%{opacity:0}}
+.arn .tile{border-radius:12px;background:#1c1c1e;position:relative;overflow:hidden}
+.arn .pa{position:absolute;left:9%;top:14%;width:36%;aspect-ratio:1;border-radius:9px;background:linear-gradient(135deg,#fbbc04,#ea8600)}
+.arn .pt{position:absolute;left:52%;top:18%;right:8%}
+.arn .pt i{display:block;height:5px;border-radius:3px;background:rgba(255,255,255,.55);margin-bottom:6px}
+.arn .pt i+i{width:60%;background:rgba(255,255,255,.25)}
+.arn .pr{position:absolute;left:9%;right:9%;bottom:14%;height:3px;border-radius:2px;background:rgba(255,255,255,.18)}
+.arn .pr::before{content:"";display:block;height:100%;width:42%;border-radius:2px;background:#fdd663}
+.arn .days{position:absolute;left:10%;right:10%;top:22%;display:flex;justify-content:space-between}
+.arn .days i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22)}
+.arn .days i.on{background:var(--blue)}
+.arn .ev{position:absolute;left:10%;right:10%;top:52%;height:18px;border-left:3px solid #81c995;background:rgba(129,201,149,.15);border-radius:2px}
+.arn .person{position:absolute;left:50%;top:44%;width:36%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.28);box-shadow:0 30px 0 9px rgba(255,255,255,.14)}
+.arn .cursor{position:absolute;z-index:3;width:15px;height:15px;animation:arn-c 14s infinite}
+.arn .cursor::before{content:"";position:absolute;inset:0;background:#fff;clip-path:polygon(0 0,0 85%,25% 65%,45% 100%,58% 94%,40% 60%,75% 60%);filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+@keyframes arn-c{0%,26%{left:70%;top:70%}31%,54%{left:51%;top:5%}60%,100%{left:70%;top:70%}}
+
+/* ---------- Story ---------- */
+.arn .story{display:flex;gap:18px;align-items:flex-start;max-width:720px;margin:72px auto 0;padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff}
+.arn .story img{width:48px;height:48px;border-radius:50%;flex:none}
+.arn .story p{font-size:16px;color:#3c4043}
+.arn .story p+p{margin-top:10px}
+.arn .story b{display:block;font-weight:600;color:var(--text);margin-bottom:4px}
+
+/* ---------- Section heading ---------- */
+.arn .head{text-align:center;max-width:640px;margin:88px auto 32px}
+.arn .head h2{font-size:clamp(30px,5cqw,44px);font-weight:800;line-height:1.08;margin:10px 0 12px}
+.arn .head p{font-size:17px}
+
+/* ---------- Bento ---------- */
+.arn .bento{display:grid;grid-template-columns:1fr;gap:14px}
+@container (min-width:720px){
+  .arn .bento{grid-template-columns:repeat(6,1fr)}
+  .arn .s2{grid-column:span 2}.arn .s3{grid-column:span 3}.arn .s4{grid-column:span 4}.arn .s6{grid-column:span 6}
+}
+.arn .cell{position:relative;display:flex;flex-direction:column;border-radius:26px;background:var(--soft);border:1px solid var(--line);overflow:hidden;transition:transform .35s cubic-bezier(.4,0,.2,1),box-shadow .35s}
+.arn .cell:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(32,33,36,.08)}
+.arn .cell .txt{padding:24px 24px 18px}
+.arn .cell h3{font-size:21px;font-weight:700;line-height:1.2;margin:6px 0 8px}
+.arn .cell p{font-size:15px}
+.arn .cell .shot{margin-top:auto;padding:0 18px 18px}
+.arn .cell .shot img{margin:0 auto;filter:drop-shadow(0 14px 22px rgba(0,0,0,.22))}
+.arn .cell.dark{background:var(--ink);border-color:#1f2329}
+.arn .cell.dark h3{color:#fff}.arn .cell.dark p{color:#9aa0a6}.arn .cell.dark .label{color:#8ab4f8}
+.arn .cell.blue{background:linear-gradient(160deg,#1a73e8,#0b57d0);border-color:transparent}
+.arn .cell.blue h3{color:#fff}.arn .cell.blue p{color:rgba(255,255,255,.82)}.arn .cell.blue .label{color:#d2e3fc}
+.arn .sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.arn .sources span{font-size:12.5px;font-weight:500;padding:5px 11px;border-radius:9999px;background:rgba(255,255,255,.16);color:#fff}
+.arn .bigbars{display:flex;gap:6px;align-items:flex-end;height:64px;margin:auto 24px 26px}
+.arn .bigbars b{flex:1;border-radius:6px;background:rgba(255,255,255,.85);animation:arn-bar 1s ease-in-out infinite alternate;transform-origin:bottom}
+.arn .bigbars b:nth-child(odd){animation-duration:.8s}
+.arn .bigbars b:nth-child(1){height:40%}.arn .bigbars b:nth-child(2){height:85%;animation-delay:-.4s}.arn .bigbars b:nth-child(3){height:60%;animation-delay:-.2s}
+.arn .bigbars b:nth-child(4){height:100%;animation-delay:-.6s}.arn .bigbars b:nth-child(5){height:55%;animation-delay:-.1s}.arn .bigbars b:nth-child(6){height:75%;animation-delay:-.5s}
+.arn .bigbars b:nth-child(7){height:45%;animation-delay:-.3s}
+.arn .term{margin:auto 24px 24px;padding:14px 16px;border-radius:14px;background:#000;font:500 13px ui-monospace,Menlo,monospace;color:#9aa0a6;line-height:1.8}
+.arn .term b{color:#81c995;font-weight:600}
+.arn .term .cur{display:inline-block;width:8px;height:14px;vertical-align:-2px;background:#81c995;animation:arn-blink 1.1s steps(1) infinite}
+@keyframes arn-blink{50%{opacity:0}}
+
+/* ---------- Closed notch strip ---------- */
+.arn .wingsrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px 14px;max-width:760px;margin:0 auto}
+.arn .mini{height:38px;border-radius:0 0 15px 15px;background:#000;display:flex;align-items:center;justify-content:space-between;padding:0 14px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.arn .mi{margin:0}
+.arn .mi figcaption{text-align:center;margin-top:8px;font-size:13.5px;color:var(--muted)}
+.arn .dev{display:flex;align-items:center;gap:1px;padding:1px 6px;border-radius:6px;background:rgba(129,201,149,.18);font:700 11px ui-monospace,Menlo,monospace;color:#81c995}
+.arn .dev .c{animation:arn-blink 1.1s steps(1) infinite}
+
+/* ---------- Details ---------- */
+.arn .cols{display:grid;grid-template-columns:1fr;gap:14px}
+@container (min-width:720px){.arn .cols{grid-template-columns:1fr 1fr}}
+.arn .box{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff}
+.arn .box h3{font-size:19px;font-weight:700;margin-bottom:12px}
+.arn .box ul{margin:0;padding:0;list-style:none}
+.arn .box ul li{position:relative;padding:10px 0 10px 18px;border-top:1px solid var(--line);color:#3c4043;font-size:15px}
+.arn .box ul li:first-child{border-top:0;padding-top:0}
+.arn .box ul li::before{content:"";position:absolute;left:0;top:19px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.arn .box ul li:first-child::before{top:9px}
+.arn .steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.arn .steps li{counter-increment:s;padding-left:44px;position:relative;margin-bottom:16px;color:#3c4043;font-size:15px}
+.arn .steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:28px;height:28px;border-radius:50%;background:var(--blue-l);color:var(--blue);font:700 13px/28px 'Outfit',sans-serif;text-align:center}
+.arn code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:#f1f3f4;padding:2px 6px;border-radius:5px;color:var(--text)}
+
+/* ---------- Download ---------- */
+.arn .dl{margin:88px 0 24px;padding:56px 24px;border-radius:28px;text-align:center;color:#fff;
+  background:radial-gradient(700px 300px at 50% 0%,#4c8df6 0%,#1a73e8 45%,#0b57d0 100%)}
+.arn .dl img{width:72px;height:72px;border-radius:50%;margin:0 auto 18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.arn .dl h2{color:#fff;font-size:clamp(28px,4.6cqw,40px);font-weight:800;margin-bottom:10px}
+.arn .dl p{color:rgba(255,255,255,.85);margin-bottom:24px}
+.arn .dl .btn{background:#fff;color:var(--blue)!important}
+.arn .dl .meta{display:block;margin-top:14px;font-size:13px;color:rgba(255,255,255,.75)}
+.arn .sign{text-align:center;color:var(--faint);font-size:14px;margin:0 0 8px}
+@media (prefers-reduced-motion:reduce){.arn *{animation:none!important}.arn .w-music{opacity:1}}
+</style>
+
+<div class="arn">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="badge"><img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/logo.png" alt=""><b>ARNotch 1.0</b> · aplikasi macOS gratis</div>
+    <h1>Notch MacBook yang <span>akhirnya berguna.</span></h1>
+    <p class="sub">Arahkan kursor ke notch, dan musik, file, timer, kondisi sistem, server localhost, serta perangkat yang tersambung langsung terbuka di sana.</p>
+    <div class="ctas">
+      <a class="btn primary" href="https://github.com/jejakkamera/ARNotch/raw/main/release/ARNotch-1.0.0.dmg">Unduh untuk macOS</a>
+      <a class="btn ghost" href="#arn-fitur">Lihat fitur</a>
+    </div>
+    <p class="fine">Tanpa akun · tanpa license key · macOS 14+</p>
+  </div>
+  <div class="stage" role="img" aria-label="Animasi: notch ARNotch melebar menampilkan musik, lalu terbuka menjadi panel saat kursor diarahkan ke atas">
+    <div class="mac">
+      <div class="menubar"><i style="left:14px;width:40px"></i><i style="left:64px;width:30px"></i><i style="left:104px;width:36px"></i><i style="right:16px;width:50px"></i><i style="right:76px;width:18px"></i></div>
+      <div class="notch">
+        <div class="wing l w-music"><span class="art"></span></div>
+        <div class="wing r w-music"><span class="bars"><b></b><b></b><b></b><b></b></span></div>
+        <div class="wing l w-timer"><span class="tmr-ico"></span></div>
+        <div class="wing r w-timer"><span class="tmr">24:59</span></div>
+        <div class="panel">
+          <div class="tile"><span class="pa"></span><span class="pt"><i></i><i></i></span><span class="pr"></span></div>
+          <div class="tile"><span class="days"><i></i><i></i><i></i><i class="on"></i><i></i></span><span class="ev"></span></div>
+          <div class="tile"><span class="person"></span></div>
+        </div>
+      </div>
+      <div class="cursor"></div>
+    </div>
+    <div class="base"></div>
+  </div>
+</section>
+
+<div class="wrap">
+
+<div class="story">
+  <img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/logo.png" alt="">
+  <div>
+    <b>Kenapa saya membuatnya</b>
+    <p>Awalnya saya memakai NotchNook. Aplikasinya bagus, tapi suatu hari aktivasi lisensinya gagal terus. Daripada menunggu, saya menulis versi sendiri dari nol dengan Swift.</p>
+    <p>Lalu saya tambahkan hal-hal yang saya butuhkan sehari-hari sebagai dosen dan developer: daftar port <code>localhost</code>, tombol untuk menghitamkan proyektor, dan Pomodoro. Hasilnya saya bagikan gratis. — Adi Rizky Pratama</p>
+  </div>
+</div>
+
+<div class="head" id="arn-fitur">
+  <span class="label">Fitur</span>
+  <h2>Lima tab, satu gerakan kursor.</h2>
+  <p>Semua yang biasanya tersebar di Dock, menu bar, dan Activity Monitor, kini ada di satu tempat.</p>
+</div>
+
+<div class="bento">
+
+  <div class="cell s4">
+    <div class="txt"><span class="label">Nook</span><h3>Musik, kalender, dan cermin.</h3>
+      <p>Apa pun yang sedang diputar, lengkap dengan cover dan kontrol. Kalender minggu ini, termasuk Google Calendar. Cermin kamera untuk mengecek penampilan, bisa memotret dan merekam video.</p></div>
+    <div class="shot"><img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/home.png" alt="Tab Nook: pemutar musik, kalender, dan cermin kamera"></div>
+  </div>
+
+  <div class="cell s2 blue">
+    <div class="txt"><span class="label">Now Playing</span><h3>Bukan cuma Spotify.</h3>
+      <p>ARNotch membaca pemutar media sistem, jadi video YouTube di browser pun ikut tampil.</p>
+      <div class="sources"><span>Spotify</span><span>YouTube</span><span>Apple Music</span><span>Podcast</span></div></div>
+    <div class="bigbars" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+  </div>
+
+  <div class="cell s3">
+    <div class="txt"><span class="label">Timer</span><h3>Timer, alarm, dan Pomodoro.</h3>
+      <p>Timer sekali klik, alarm jam tertentu, dan siklus fokus 25/5. Sisa waktunya tetap terlihat walau notch ditutup.</p></div>
+    <div class="shot"><img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/pomodoro.png" alt="Pomodoro yang sedang berjalan di ARNotch"></div>
+  </div>
+
+  <div class="cell s3">
+    <div class="txt"><span class="label">Shelf</span><h3>Tempat parkir file.</h3>
+      <p>Seret PDF, gambar, atau teks ke notch. Ambil lagi kapan saja dengan menyeretnya keluar, atau kirim lewat AirDrop.</p></div>
+    <div class="shot"><img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/shelf.png" alt="Tab Shelf ARNotch"></div>
+  </div>
+
+  <div class="cell s6 dark">
+    <div class="txt"><span class="label">System</span><h3>Tahu apa yang membuat Mac lambat.</h3>
+      <p>CPU, RAM, kecepatan internet, dan kesehatan baterai (kapasitas dan jumlah siklus). Aplikasi yang paling boros tampil berurutan, dengan Quit dan Force Quit untuk yang hang.</p></div>
+    <div class="shot"><img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/system-apps.png" alt="Tab System: CPU, memori, jaringan, baterai, dan daftar aplikasi"></div>
+  </div>
+
+  <div class="cell s3">
+    <div class="txt"><span class="label">Untuk developer</span><h3>Port localhost di satu tempat.</h3>
+      <p>Laravel, Node, MAMP, Valet. Buka di browser, salin URL untuk dites di HP, atau hentikan proses yang nyangkut.</p></div>
+    <div class="term" aria-hidden="true"><b>:8000</b> php · laravel-app<br><b>:5173</b> node · vite<br><b>:8888</b> httpd · MAMP<br>› <span class="cur"></span></div>
+  </div>
+
+  <div class="cell s3">
+    <div class="txt"><span class="label">Connect</span><h3>Perangkat yang tersambung.</h3>
+      <p>Pindah output suara, atur monitor ke Extend atau Mirror, atau Blank untuk menghitamkan proyektor saat membuka catatan. Baterai mouse dan headset ikut terlihat.</p></div>
+    <div class="shot"><img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/connect.png" alt="Tab Connect dengan monitor LG dan mouse MX Master tersambung"></div>
+  </div>
+
+</div>
+
+<div class="head">
+  <span class="label">Saat tertutup</span>
+  <h2>Hanya muncul ketika perlu.</h2>
+  <p>Notch melebar sedikit untuk info penting, lalu kembali seperti biasa.</p>
+</div>
+<div class="wingsrow">
+  <figure class="mi"><div class="mini"><span class="art"></span><span class="bars"><b></b><b></b><b></b><b></b></span></div><figcaption>Musik diputar</figcaption></figure>
+  <figure class="mi"><div class="mini"><span class="tmr-ico"></span><span class="tmr">14:59</span></div><figcaption>Timer atau alarm</figcaption></figure>
+  <figure class="mi"><div class="mini"><span class="dev">›<span class="c">_</span></span><span></span></div><figcaption>Server lokal aktif</figcaption></figure>
+</div>
+
+<div class="head">
+  <span class="label">Detail</span>
+  <h2>Sebelum memasang.</h2>
+</div>
+<div class="cols">
+  <div class="box">
+    <h3>Cara memasang</h3>
+    <ol class="steps">
+      <li>Unduh <code>ARNotch-1.0.0.dmg</code>, lalu klik dua kali.</li>
+      <li>Seret ARNotch ke folder Applications.</li>
+      <li>Buka ARNotch. Jika macOS menolak, buka <i>System Settings → Privacy &amp; Security</i>, lalu klik <i>Open Anyway</i>.</li>
+      <li>Arahkan kursor ke notch. Aktifkan <i>Launch at login</i> di Settings agar selalu siap.</li>
+    </ol>
+  </div>
+  <div class="box">
+    <h3>Yang perlu diketahui</h3>
+    <ul>
+      <li>Butuh macOS 14 Sonoma atau lebih baru. Di Mac tanpa notch, ARNotch membuat notch virtual.</li>
+      <li>Alarm tidak berbunyi saat laptop ditutup. Alarm yang terlewat ditandai begitu Mac bangun.</li>
+      <li>Kamera, mikrofon, kalender, dan Bluetooth baru diminta saat fiturnya dipakai.</li>
+      <li>Belum dinotarisasi Apple, jadi saat pertama dibuka perlu konfirmasi di Privacy &amp; Security.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="dl">
+  <img src="https://raw.githubusercontent.com/jejakkamera/ARNotch/main/docs/screenshots/logo.png" alt="Logo ARNotch">
+  <h2>Coba ARNotch.</h2>
+  <p>Gratis, tanpa akun. Ukurannya cuma 2,2 MB.</p>
+  <a class="btn" href="https://github.com/jejakkamera/ARNotch/raw/main/release/ARNotch-1.0.0.dmg">Unduh ARNotch 1.0</a>
+  <span class="meta">macOS 14+ · Apple Silicon</span>
+</div>
+
+<p class="sign">Ada saran atau menemukan bug? Kabari saya lewat <a href="https://www.adirp.id/">adirp.id</a>.</p>
+
+</div>
+</div>
