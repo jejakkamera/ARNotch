@@ -70,3 +70,8 @@ Detail arsitektur dan catatan teknis ada di [docs/DEVELOPMENT.md](docs/DEVELOPME
 ## Dibuat oleh
 
 **Adi Rizky Pratama** · [adirp.id](https://www.adirp.id/)
+
+## Lisensi
+
+[MIT License](LICENSE) © 2026 Adi Rizky Pratama
+
