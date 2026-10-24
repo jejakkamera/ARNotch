@@ -36,7 +36,7 @@ ARNotch adalah aplikasi macOS native (Swift + SwiftUI) yang mengubah notch MacBo
 
 ## Instalasi
 
-1. Unduh `ARNotch-x.y.z.dmg` dari halaman [Releases](../../releases).
+1. Unduh **[ARNotch-1.0.0.dmg](release/ARNotch-1.0.0.dmg?raw=1)** (2,2 MB), atau ambil dari folder [`release/`](release/).
 2. Seret **ARNotch** ke folder **Applications**.
 3. Buka ARNotch. Karena belum dinotarisasi Apple, macOS akan meminta konfirmasi: buka **System Settings → Privacy & Security**, lalu klik **Open Anyway**.
 4. Aktifkan **Settings → Launch at login** agar ARNotch selalu berjalan.

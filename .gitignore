@@ -3,10 +3,11 @@
 .swiftpm/
 Package.resolved
 
-# Build output (attach the .dmg to a GitHub Release instead)
+# Build output (the published installer lives in release/)
 dist/
-*.dmg
 *.app
+*.dmg
+!release/*.dmg
 
 # macOS / editors
 .DS_Store
